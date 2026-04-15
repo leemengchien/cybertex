@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MemoTiles｜牆面懸掛佈置完全指南</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#E53935;
+  --red-dark:#C62828;
+  --red-light:#FFEBEE;
+  --red-mid:#FFCDD2;
+  --black:#1A1A1A;
+  --gray-dark:#424242;
+  --gray:#757575;
+  --gray-light:#BDBDBD;
+  --gray-bg:#F5F5F5;
+  --white:#FFFFFF;
+  --border:#E0E0E0;
+  --yellow:#FFF8E1;
+  --yellow-border:#FFD54F;
+  --green:#E8F5E9;
+  --green-text:#2E7D32;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--black);font-family:'Noto Sans TC',sans-serif;font-size:15px;line-height:1.6}
+
+/* ─ NAV ─ */
+.topbar{background:var(--red);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:.5px}
+.topbar span{background:rgba(255,255,255,.2);padding:2px 10px;border-radius:3px;margin-left:8px;font-size:12px}
+nav{background:white;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{display:flex;align-items:center;gap:8px}
+.nav-logo-text{font-size:22px;font-weight:900;color:var(--black);letter-spacing:-0.5px}
+.nav-logo-text b{color:var(--red)}
+.nav-logo-badge{background:var(--red);color:white;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:.5px}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links a{display:block;padding:0 16px;height:60px;line-height:60px;font-size:14px;font-weight:500;color:var(--gray-dark);text-decoration:none;border-bottom:3px solid transparent;transition:all .15s}
+.nav-links a:hover,.nav-links a.act{color:var(--red);border-bottom-color:var(--red)}
+
+/* ─ HERO ─ */
+.hero{background:var(--gray-bg);border-bottom:1px solid var(--border);padding:0}
+.hero-inner{max-width:1200px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:1fr 480px;gap:48px;align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:6px;background:var(--red-light);color:var(--red);font-size:12px;font-weight:700;padding:4px 10px;border-radius:3px;margin-bottom:16px;letter-spacing:.5px}
+.hero-kicker::before{content:'▶';font-size:9px}
+.hero-h1{font-size:clamp(28px,3.5vw,42px);font-weight:900;color:var(--black);line-height:1.15;margin-bottom:16px}
+.hero-h1 em{color:var(--red);font-style:normal}
+.hero-desc{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:24px}
+.hero-specs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.spec-chip{display:flex;align-items:center;gap:6px;border:1.5px solid var(--border);background:white;padding:7px 14px;border-radius:4px;font-size:13px;font-weight:700;color:var(--black)}
+.spec-chip .chip-dot{width:10px;height:10px;border-radius:2px}
+.chip-s{background:#E57373}
+.chip-r{background:#EF5350}
+.chip-g{background:#B71C1C}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap}
+.hero-badge{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--gray);font-weight:500}
+.hero-badge::before{content:'✓';color:var(--green-text);font-weight:900}
+
+/* Hero product visual */
+.hero-visual{background:white;border:1px solid var(--border);border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:20px}
+.hv-title{font-size:13px;font-weight:700;color:var(--gray);letter-spacing:.5px;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.hv-row{display:flex;align-items:flex-end;gap:10px;justify-content:center}
+/* 1cm = 13px */
+.hv-20s{width:130px;height:130px;border-radius:4px;box-shadow:0 3px 12px rgba(0,0,0,.15);position:relative}
+.hv-20r{width:130px;height:195px;border-radius:4px;box-shadow:0 3px 12px rgba(0,0,0,.15);position:relative}
+.hv-30s{width:195px;height:195px;border-radius:4px;box-shadow:0 3px 12px rgba(0,0,0,.15);position:relative}
+.hv-20s::after,.hv-20r::after,.hv-30s::after{content:'';position:absolute;inset:0;border-radius:4px;background:linear-gradient(135deg,rgba(255,255,255,.25),transparent 60%)}
+.col-s{background:linear-gradient(145deg,#EF9A9A,#E53935)}
+.col-r{background:linear-gradient(145deg,#EF5350,#B71C1C)}
+.col-g{background:linear-gradient(145deg,#EF9A9A 0%,#E53935 50%,#B71C1C 100%)}
+.col-sm{background:linear-gradient(145deg,#FFCDD2,#EF9A9A)}
+.col-rm{background:linear-gradient(145deg,#FFCDD2,#EF5350)}
+.hv-label{text-align:center;font-size:11px;font-weight:700;color:var(--gray);margin-top:6px;letter-spacing:.5px}
+
+/* ─ PAGE LAYOUT ─ */
+.page-max{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ─ SECTION HEADER ─ */
+.sec{padding:56px 0}
+.sec-alt{background:var(--gray-bg)}
+.sec-hd{margin-bottom:32px}
+.sec-hd-inner{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid var(--black);margin-bottom:4px}
+.sec-hd h2{font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--black)}
+.sec-hd h2 em{color:var(--red);font-style:normal}
+.sec-tag{font-size:12px;font-weight:700;color:var(--red);letter-spacing:1px}
+.sec-sub{font-size:13px;color:var(--gray);margin-top:6px}
+.sec-hd-line{height:3px;background:var(--red);width:48px}
+
+/* ─ SIZE CARDS ─ */
+.size-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sz-card{background:white;border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.sz-card:hover{box-shadow:0 4px 20px rgba(229,57,53,.12);border-color:var(--red-mid)}
+.sz-card-top{padding:28px 24px 20px;background:var(--gray-bg);text-align:center;border-bottom:1px solid var(--border)}
+.sz-visual-wrap{display:flex;justify-content:center;align-items:flex-end;height:130px;margin-bottom:16px}
+/* 1cm = 11px */
+.sv-20x20{width:110px;height:110px;border-radius:4px;background:linear-gradient(145deg,#EF9A9A,#E53935);box-shadow:0 4px 14px rgba(229,57,53,.3)}
+.sv-20x30{width:110px;height:165px;border-radius:4px;background:linear-gradient(145deg,#EF5350,#B71C1C);box-shadow:0 4px 14px rgba(183,28,28,.3)}
+.sv-30x30{width:165px;height:165px;border-radius:4px;background:linear-gradient(145deg,#E53935,#7F0000);box-shadow:0 4px 14px rgba(127,0,0,.3)}
+.sz-dim{font-size:28px;font-weight:900;color:var(--black);margin-bottom:2px}
+.sz-nick{display:inline-block;background:var(--red-light);color:var(--red);font-size:11px;font-weight:700;padding:3px 10px;border-radius:3px;letter-spacing:.5px}
+.sz-card-body{padding:20px 24px}
+.sz-card-desc{font-size:13px;color:var(--gray-dark);line-height:1.75;margin-bottom:14px}
+.sz-tags{display:flex;flex-wrap:wrap;gap:6px}
+.sz-tag{background:var(--gray-bg);border:1px solid var(--border);font-size:11px;color:var(--gray-dark);padding:3px 10px;border-radius:3px;font-weight:500}
+.sz-best{background:var(--red-light);border-color:var(--red-mid);color:var(--red)}
+
+/* ─ LAYOUT CARDS ─ */
+.layout-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.lc{background:white;border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.lc:hover{box-shadow:0 4px 20px rgba(0,0,0,.1);border-color:var(--gray-light)}
+.lc-vis{height:240px;background:var(--gray-bg);display:flex;align-items:center;justify-content:center;padding:24px;position:relative;border-bottom:1px solid var(--border)}
+.lc-num{position:absolute;top:10px;left:14px;font-size:11px;font-weight:900;color:var(--gray-light);letter-spacing:1px}
+.lc-hot{position:absolute;top:10px;right:14px;background:var(--red);color:white;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.5px}
+.lc-new{position:absolute;top:10px;right:14px;background:var(--black);color:white;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.5px}
+
+/* tiles inside layout cards: 1cm = 8px */
+.t{border-radius:3px;flex-shrink:0;position:relative;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.t::after{content:'';position:absolute;inset:0;border-radius:3px;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent 55%)}
+.ts{background:linear-gradient(145deg,#EF9A9A,#E53935)}
+.tr{background:linear-gradient(145deg,#EF5350,#B71C1C)}
+.tg{background:linear-gradient(145deg,#E53935,#7F0000)}
+.tsm{background:linear-gradient(145deg,#FFCDD2,#EF9A9A)}
+.trm{background:linear-gradient(145deg,#FFCDD2,#EF5350)}
+.tgm{background:linear-gradient(145deg,#EF9A9A,#C62828)}
+/* 20×20=40px  20×30=40×60px  30×30=60×60px */
+.p-ss{width:40px;height:40px}
+.p-sr{width:40px;height:60px}
+.p-sq{width:60px;height:60px}
+/* large versions for featured */
+.P-ss{width:56px;height:56px}
+.P-sr{width:56px;height:84px}
+.P-sq{width:84px;height:84px}
+/* xl */
+.X-ss{width:72px;height:72px}
+.X-sr{width:72px;height:108px}
+.X-sq{width:108px;height:108px}
+.row{display:flex;gap:8px;align-items:flex-end}
+.col{display:flex;flex-direction:column;gap:8px}
+.grid2c{display:grid;gap:8px}
+
+.lc-body{padding:16px 20px 20px}
+.lc-spec-row{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.lc-spec-dot{width:8px;height:8px;border-radius:2px}
+.dot-s{background:var(--red)}
+.dot-r{background:#C62828}
+.dot-g{background:#7F0000}
+.lc-name{font-size:17px;font-weight:900;color:var(--black);margin-bottom:6px}
+.lc-desc{font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:12px}
+.lc-meta{display:flex;flex-wrap:wrap;gap:6px;padding-top:12px;border-top:1px solid var(--border)}
+.lc-chip{font-size:11px;font-weight:700;padding:3px 10px;border-radius:3px}
+.chip-red{background:var(--red-light);color:var(--red)}
+.chip-black{background:var(--gray-bg);color:var(--gray-dark)}
+.chip-green{background:var(--green);color:var(--green-text)}
+
+/* ─ SCENE SECTION ─ */
+.scene-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.sc-card{background:white;border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:box-shadow .2s}
+.sc-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.09)}
+.sc-top{background:var(--red);padding:20px 22px;display:flex;align-items:center;gap:12px}
+.sc-icon{font-size:28px}
+.sc-title-wrap{}
+.sc-title{font-size:16px;font-weight:900;color:white;margin-bottom:2px}
+.sc-place{font-size:11px;color:rgba(255,255,255,.7);font-weight:500;letter-spacing:.5px}
+.sc-body{padding:18px 22px}
+.sc-desc{font-size:13px;color:var(--gray-dark);line-height:1.75;margin-bottom:14px}
+.sc-recipes{display:flex;flex-direction:column;gap:6px}
+.sc-recipe{background:var(--gray-bg);border-left:3px solid var(--red);padding:8px 12px;border-radius:0 4px 4px 0;font-size:12px;color:var(--gray-dark);line-height:1.5}
+.sc-recipe b{color:var(--black);font-weight:700}
+
+/* ─ COMBO TABLE ─ */
+.combo-table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.combo-table thead tr{background:var(--black)}
+.combo-table thead th{padding:12px 16px;text-align:left;font-size:12px;font-weight:700;color:white;letter-spacing:.5px;text-transform:uppercase}
+.combo-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+.combo-table tbody tr:hover{background:var(--red-light)}
+.combo-table tbody tr:last-child{border-bottom:none}
+.combo-table td{padding:14px 16px;font-size:14px;color:var(--gray-dark);vertical-align:middle}
+.combo-table td:first-child{font-weight:900;color:var(--black);font-size:15px}
+.combo-tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;white-space:nowrap}
+.ct-hot{background:var(--red);color:white}
+.ct-rec{background:var(--red-light);color:var(--red)}
+.ct-new{background:var(--black);color:white}
+.ct-gift{background:#FFF8E1;color:#F57F17;border:1px solid #FFD54F}
+
+/* ─ MARKETING COPY ─ */
+.mkt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.mk{background:white;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.mk-head{background:var(--black);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.mk-channel{font-size:12px;font-weight:700;color:white;letter-spacing:.5px}
+.mk-platform{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:1px;text-transform:uppercase}
+.mk-body-wrap{padding:20px}
+.mk-title{font-size:16px;font-weight:900;color:var(--black);margin-bottom:12px;line-height:1.3}
+.mk-copy{font-size:13px;color:var(--gray-dark);line-height:1.85;white-space:pre-line;background:var(--gray-bg);padding:14px 16px;border-radius:4px;border-left:3px solid var(--red)}
+
+/* ─ TIPS ─ */
+.tips-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:white}
+.tip-row{display:flex;gap:0;border-bottom:1px solid var(--border)}
+.tip-row:last-child{border-bottom:none}
+.tip-num-col{width:64px;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tip-num{font-size:24px;font-weight:900;color:white}
+.tip-content{padding:18px 22px;flex:1}
+.tip-title{font-size:15px;font-weight:900;color:var(--black);margin-bottom:5px}
+.tip-text{font-size:13px;color:var(--gray);line-height:1.7}
+
+/* ─ NOTICE BOX ─ */
+.notice{background:var(--yellow);border:1.5px solid var(--yellow-border);border-radius:6px;padding:16px 20px;display:flex;gap:12px;align-items:flex-start;margin-bottom:24px}
+.notice-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.notice-text{font-size:13px;color:#4E342E;line-height:1.75}
+.notice-text b{color:var(--black);font-weight:700}
+
+/* ─ LEGEND BAR ─ */
+.legend{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:12px 16px;background:white;border:1px solid var(--border);border-radius:4px;margin-bottom:20px}
+.legend-title{font-size:12px;font-weight:700;color:var(--gray);letter-spacing:.5px;flex-shrink:0}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--black)}
+.leg-box{border-radius:2px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+
+/* ─ CTA BLOCK ─ */
+.cta-block{background:var(--red);border-radius:6px;padding:48px 48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.cta-left h2{font-size:clamp(22px,3vw,32px);font-weight:900;color:white;margin-bottom:10px;line-height:1.2}
+.cta-left p{font-size:15px;color:rgba(255,255,255,.8);line-height:1.7}
+.cta-right{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
+.btn-white{background:white;color:var(--red);font-size:14px;font-weight:900;padding:14px 32px;border-radius:4px;cursor:pointer;border:none;letter-spacing:.5px;transition:background .15s;white-space:nowrap}
+.btn-white:hover{background:#FFEBEE}
+.btn-outline{background:transparent;color:white;font-size:14px;font-weight:700;padding:14px 32px;border-radius:4px;cursor:pointer;border:2px solid rgba(255,255,255,.5);letter-spacing:.5px;white-space:nowrap}
+.btn-outline:hover{border-color:white}
+
+/* ─ FOOTER ─ */
+footer{background:var(--black);color:white;padding:32px 24px;margin-top:0}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-brand{font-size:18px;font-weight:900;color:white}
+.footer-brand span{color:var(--red)}
+.footer-info{font-size:12px;color:rgba(255,255,255,.4);text-align:right}
+
+/* ─ REVEAL ─ */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+
+/* ─ BREADCRUMB ─ */
+.breadcrumb{padding:10px 0;font-size:12px;color:var(--gray);display:flex;gap:5px;align-items:center}
+.breadcrumb a{color:var(--gray);text-decoration:none}
+.breadcrumb a:hover{color:var(--red)}
+.breadcrumb span{color:var(--gray-light)}
+
+@media(max-width:800px){
+  .hero-inner{grid-template-columns:1fr;padding:28px 16px}
+  .hero-visual{display:none}
+  .size-grid{grid-template-columns:1fr}
+  .cta-block{grid-template-columns:1fr}
+  nav .nav-links{display:none}
+  .page-max{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">🎉 多件優惠進行中！買 3 件享 9 折，買 6 件享 85 折 <span>立即選購 →</span></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-text">Memo<b>Tiles</b></div>
+      <div class="nav-logo-badge">客製化照片磚</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sizes" class="act">尺寸介紹</a></li>
+      <li><a href="#layouts">懸掛方式</a></li>
+      <li><a href="#scenes">場景應用</a></li>
+      <li><a href="#combos">套組方案</a></li>
+      <li><a href="#marketing">行銷話術</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">牆面懸掛完全指南</div>
+      <h1 class="hero-h1">三種尺寸<br><em>打造你專屬的照片牆</em></h1>
+      <p class="hero-desc">MemoTiles 提供 20×20、20×30、30×30 cm 三種規格<br>免打洞、可重複黏貼，讓每一面牆都成為你的生活故事</p>
+      <div class="hero-specs">
+        <div class="spec-chip"><div class="chip-dot chip-s"></div>20×20 cm</div>
+        <div class="spec-chip"><div class="chip-dot chip-r"></div>20×30 cm</div>
+        <div class="spec-chip"><div class="chip-dot chip-g"></div>30×30 cm</div>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge">免打洞，不傷牆面</div>
+        <div class="hero-badge">可重複移位</div>
+        <div class="hero-badge">租屋族適用</div>
+        <div class="hero-badge">7 天到貨</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-title">產品實際比例示意圖</div>
+      <div class="hv-row">
+        <div>
+          <div class="hv-20s col-s"></div>
+          <div class="hv-label">20×20</div>
+        </div>
+        <div>
+          <div class="hv-20r col-r"></div>
+          <div class="hv-label">20×30</div>
+        </div>
+        <div>
+          <div class="hv-30s col-g"></div>
+          <div class="hv-label">30×30</div>
+        </div>
+      </div>
+      <div style="background:var(--yellow);border:1px solid var(--yellow-border);border-radius:4px;padding:10px 14px;font-size:12px;color:#4E342E;line-height:1.6;margin-top:8px">
+        📐 <b>以上示意圖依實際比例繪製</b><br>三種尺寸可自由搭配組合使用
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIZES SECTION -->
+<section id="sizes" class="sec">
+  <div class="page-max">
+    <div class="sec-hd reveal">
+      <div class="sec-hd-inner">
+        <h2>三種尺寸 <em>完整介紹</em></h2>
+        <div class="sec-tag">PRODUCT SIZES</div>
+      </div>
+      <div class="sec-hd-line"></div>
+      <p class="sec-sub">了解每種尺寸的特性，選對規格讓佈置效果加倍！</p>
+    </div>
+    <div class="notice reveal">
+      <div class="notice-icon">💡</div>
+      <div class="notice-text"><b>選購小提示：</b>不確定要幾片？先從 4 片入門組開始嘗試。MemoTiles 可無限擴充，滿意後再追加購買，片片相容、輕鬆拼接。</div>
+    </div>
+    <div class="size-grid reveal">
+
+      <div class="sz-card">
+        <div class="sz-card-top">
+          <div class="sz-visual-wrap"><div class="sv-20x20"></div></div>
+          <div class="sz-dim">20 × 20 cm</div>
+          <div class="sz-nick">方形小磚 ▪ 入門首選</div>
+        </div>
+        <div class="sz-card-body">
+          <p class="sz-card-desc">最靈活的基本單元。可單獨使用，也能 4、9、16 片大量組合。每片面積小，失敗風險低，是第一次嘗試照片牆的最佳選擇。適合鋪量使用，照片數量最豐富。</p>
+          <div class="sz-tags">
+            <span class="sz-tag sz-best">★ 入門首選</span>
+            <span class="sz-tag">9 宮格陣列</span>
+            <span class="sz-tag">兒童房</span>
+            <span class="sz-tag">成長紀錄</span>
+            <span class="sz-tag">填補角落</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sz-card">
+        <div class="sz-card-top">
+          <div class="sz-visual-wrap"><div class="sv-20x30"></div></div>
+          <div class="sz-dim">20 × 30 cm</div>
+          <div class="sz-nick">豎形窄框 ▪ 混搭靈魂</div>
+        </div>
+        <div class="sz-card-body">
+          <p class="sz-card-desc">直向比例是人像照、花卉、建築攝影的最佳容器，讓照片的縱深感完整呈現。搭配方形 Tiles 時創造豐富節奏，是混搭組合中最有設計感的單品。</p>
+          <div class="sz-tags">
+            <span class="sz-tag sz-best">★ 混搭核心</span>
+            <span class="sz-tag">人像照</span>
+            <span class="sz-tag">走廊玄關</span>
+            <span class="sz-tag">豎向三聯</span>
+            <span class="sz-tag">花卉植物</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sz-card">
+        <div class="sz-card-top">
+          <div class="sz-visual-wrap"><div class="sv-30x30"></div></div>
+          <div class="sz-dim">30 × 30 cm</div>
+          <div class="sz-nick">方形主角 ▪ 份量最重</div>
+        </div>
+        <div class="sz-card-body">
+          <p class="sz-card-desc">三種規格中最有份量感，單獨掛上就有強烈存在感。2–4 片即可撐起一面主牆，適合客廳、臥室等視覺焦點位置。也是送禮時最有質感的選擇。</p>
+          <div class="sz-tags">
+            <span class="sz-tag sz-best">★ 客廳首選</span>
+            <span class="sz-tag">客廳主牆</span>
+            <span class="sz-tag">大圖展示</span>
+            <span class="sz-tag">送禮首選</span>
+            <span class="sz-tag">簡約設計</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LAYOUTS SECTION -->
+<section id="layouts" class="sec sec-alt">
+  <div class="page-max">
+    <div class="sec-hd reveal">
+      <div class="sec-hd-inner">
+        <h2>懸掛方式 <em>10 種實用佈局</em></h2>
+        <div class="sec-tag">LAYOUT GUIDE</div>
+      </div>
+      <div class="sec-hd-line"></div>
+      <p class="sec-sub">每種佈局均標示使用哪些規格及適用場景，依比例繪製示意圖</p>
+    </div>
+
+    <div class="legend reveal">
+      <div class="legend-title">圖例說明：</div>
+      <div class="legend-item"><div class="leg-box ts" style="width:16px;height:16px"></div>20×20 cm（方形小磚）</div>
+      <div class="legend-item"><div class="leg-box tr" style="width:12px;height:18px"></div>20×30 cm（豎形窄框）</div>
+      <div class="legend-item"><div class="leg-box tg" style="width:18px;height:18px"></div>30×30 cm（方形主角）</div>
+    </div>
+
+    <div class="layout-grid">
+
+      <!-- 1 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.01</div>
+          <div class="lc-hot">人氣第一</div>
+          <div class="grid2c" style="grid-template-columns:repeat(2,108px);grid-template-rows:repeat(2,108px)">
+            <div class="t tg X-sq"></div>
+            <div class="t tgm X-sq"></div>
+            <div class="t tgm X-sq"></div>
+            <div class="t tg X-sq" style="background:linear-gradient(145deg,#C62828,#4A0000)"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">四連大方陣</div>
+          <div class="lc-desc">4 片 30×30 組成 64×64 cm（含間距）的完整方陣，客廳沙發後方最強存在感。照片選景點、家人大合照效果最佳。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">30×30 × 4片</div>
+            <div class="lc-chip chip-black">客廳主牆</div>
+            <div class="lc-chip chip-green">份量感最強</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.02</div>
+          <div class="lc-hot">新手必買</div>
+          <div class="grid2c" style="grid-template-columns:repeat(3,72px);grid-template-rows:repeat(3,72px)">
+            <div class="t ts P-ss"></div><div class="t tsm P-ss"></div><div class="t ts P-ss"></div>
+            <div class="t tsm P-ss"></div><div class="t ts P-ss"></div><div class="t tsm P-ss"></div>
+            <div class="t ts P-ss"></div><div class="t tsm P-ss"></div><div class="t ts P-ss"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">九宮格方陣</div>
+          <div class="lc-desc">9 片 20×20 排成 3×3，覆蓋約 64×64 cm。照片數量最多，最適合家庭成長紀錄、出遊合照或寵物精選集。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">20×20 × 9片</div>
+            <div class="lc-chip chip-black">臥室 / 客廳</div>
+            <div class="lc-chip chip-green">照片量最多</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.03</div>
+          <div class="lc-hot">走廊神器</div>
+          <div class="row" style="gap:10px;align-items:center">
+            <div class="t tr X-sr"></div>
+            <div class="t trm X-sr"></div>
+            <div class="t tr X-sr" style="background:linear-gradient(145deg,#FFCDD2,#C62828)"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">豎向三聯屏</div>
+          <div class="lc-desc">3 片 20×30 並排，形成精緻三聯畫效果。最適合玄關走廊的狹長空間，高挑比例讓空間顯得更大氣。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">20×30 × 3片</div>
+            <div class="lc-chip chip-black">玄關 / 走廊</div>
+            <div class="lc-chip chip-green">最有設計感</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.04</div>
+          <div class="lc-new">設計師款</div>
+          <div class="row" style="align-items:flex-end;gap:10px">
+            <div class="t tg X-sq"></div>
+            <div class="t tr X-sr"></div>
+            <div class="col" style="gap:10px">
+              <div class="t ts P-ss"></div>
+              <div class="t tsm P-ss"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">三尺寸混搭組</div>
+          <div class="lc-desc">三種規格同時出現，大中小層次豐富，充滿設計感。是展示 MemoTiles 產品特色最好的組合，也是最多人稱讚的方案。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">30×30 × 1</div>
+            <div class="lc-chip chip-red">20×30 × 1</div>
+            <div class="lc-chip chip-red">20×20 × 2</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.05</div>
+          <div style="display:grid;grid-template-columns:repeat(2,108px);grid-template-rows:repeat(2,52px);gap:8px">
+            <div class="t tg" style="width:108px;height:52px"></div>
+            <div class="t tgm" style="width:108px;height:52px"></div>
+            <div class="t tg" style="width:108px;height:52px;background:linear-gradient(145deg,#C62828,#4A0000)"></div>
+            <div class="t tgm" style="width:108px;height:52px"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">大小交錯橫帶</div>
+          <div class="lc-desc">4 片 30×30 排成兩排橫帶，居中對齊掛在床頭或沙發後方，簡潔大方又有份量。適合兩個主題的照片對應展示。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">30×30 × 4片</div>
+            <div class="lc-chip chip-black">臥室床頭</div>
+            <div class="lc-chip chip-green">簡約大氣</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.06</div>
+          <div class="col" style="gap:9px">
+            <div class="row" style="gap:9px">
+              <div class="t tr P-sr"></div>
+              <div class="t trm P-sr"></div>
+              <div class="t tr P-sr"></div>
+              <div class="t trm P-sr"></div>
+            </div>
+            <div class="row" style="gap:9px">
+              <div class="t ts P-ss"></div>
+              <div class="t tsm P-ss"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">豎排 + 底座組合</div>
+          <div class="lc-desc">上排 4 片 20×30 豎向並列，下方加 2 片 20×20 收尾，充分利用走廊或門廊旁的垂直空間，時間軸感十足。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">20×30 × 4片</div>
+            <div class="lc-chip chip-red">20×20 × 2片</div>
+            <div class="lc-chip chip-black">走廊長牆</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.07</div>
+          <div class="lc-hot">送禮首選</div>
+          <div class="row" style="gap:14px;align-items:center">
+            <div class="t tr" style="width:84px;height:126px"></div>
+            <div class="t trm" style="width:84px;height:126px"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">豎形雙聯畫</div>
+          <div class="lc-desc">2 片 20×30 並排，像兩幅精緻肖像畫。最適合夫妻、親子、閨蜜的對照組合。用禮品包裝送人，質感滿分。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">20×30 × 2片</div>
+            <div class="lc-chip chip-black">臥室 / 送禮</div>
+            <div class="lc-chip chip-green">質感送禮首選</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.08</div>
+          <div class="row" style="align-items:flex-start;gap:10px">
+            <div class="t tg" style="width:84px;height:84px"></div>
+            <div class="col" style="gap:9px">
+              <div class="t ts P-ss"></div>
+              <div class="t tsm P-ss"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">主角 + 伴侶</div>
+          <div class="lc-desc">1 片 30×30 為主角，旁邊搭配 2 片 20×20，主次分明又有層次。婚紗主圖配細節特寫的最佳方案，床頭牆的質感選擇。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">30×30 × 1片</div>
+            <div class="lc-chip chip-red">20×20 × 2片</div>
+            <div class="lc-chip chip-black">臥室床頭</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.09</div>
+          <div class="lc-new">年度必備</div>
+          <div class="grid2c" style="grid-template-columns:repeat(4,56px);grid-template-rows:repeat(4,56px)">
+            <div class="t ts p-ss" style="width:56px;height:56px"></div><div class="t tsm" style="width:56px;height:56px"></div><div class="t ts" style="width:56px;height:56px"></div><div class="t tsm" style="width:56px;height:56px"></div>
+            <div class="t tsm" style="width:56px;height:56px"></div><div class="t ts" style="width:56px;height:56px"></div><div class="t tsm" style="width:56px;height:56px"></div><div class="t ts" style="width:56px;height:56px"></div>
+            <div class="t ts" style="width:56px;height:56px"></div><div class="t tsm" style="width:56px;height:56px"></div><div class="t ts" style="width:56px;height:56px"></div><div class="t tsm" style="width:56px;height:56px"></div>
+            <div class="t tsm" style="width:56px;height:56px"></div><div class="t ts" style="width:56px;height:56px"></div><div class="t tsm" style="width:56px;height:56px"></div><div class="t ts" style="width:56px;height:56px"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">16 格全年紀念牆</div>
+          <div class="lc-desc">16 片 20×20 排成 4×4，覆蓋 86×86 cm。12 個月各放最佳照片加 4 張年度精選，每年底換新，是最有儀式感的年度回顧。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">20×20 × 16片</div>
+            <div class="lc-chip chip-black">客廳主牆</div>
+            <div class="lc-chip chip-green">年終換新最佳方案</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="lc reveal">
+        <div class="lc-vis">
+          <div class="lc-num">NO.10</div>
+          <div class="row" style="gap:10px;align-items:flex-end">
+            <div class="t tg X-sq"></div>
+            <div class="t ts X-ss"></div>
+            <div class="t tgm X-sq" style="background:linear-gradient(145deg,#C62828,#7F0000)"></div>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div class="lc-name">大小交錯橫排</div>
+          <div class="lc-desc">30×30 與 20×20 交替排列成單行橫帶，居中對齊掛在餐桌旁或書桌後方。簡單 3 片就能完成，是入門佈置的快速方案。</div>
+          <div class="lc-meta">
+            <div class="lc-chip chip-red">30×30 × 2片</div>
+            <div class="lc-chip chip-red">20×20 × 1片</div>
+            <div class="lc-chip chip-black">餐廳 / 書房</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCENES SECTION -->
+<section id="scenes" class="sec">
+  <div class="page-max">
+    <div class="sec-hd reveal">
+      <div class="sec-hd-inner">
+        <h2>場景應用 <em>每個空間的最佳組合</em></h2>
+        <div class="sec-tag">SCENE GUIDE</div>
+      </div>
+      <div class="sec-hd-line"></div>
+      <p class="sec-sub">依照空間特性量身推薦，讓你直接抄作業</p>
+    </div>
+    <div class="scene-grid">
+
+      <div class="sc-card reveal">
+        <div class="sc-top">
+          <div class="sc-icon">🛋️</div>
+          <div class="sc-title-wrap">
+            <div class="sc-title">客廳主牆</div>
+            <div class="sc-place">家的視覺中心</div>
+          </div>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">家的門面，也是記憶的展示台。需要份量感與完整度，30×30 是絕對主角。</p>
+          <div class="sc-recipes">
+            <div class="sc-recipe"><b>氣派首選：</b>30×30 × 4 片，四連方陣，64×64 cm</div>
+            <div class="sc-recipe"><b>混搭推薦：</b>30×30 × 2 + 20×20 × 4，主次分明</div>
+            <div class="sc-recipe"><b>照片最多：</b>20×20 × 9–16 片，滿版紀念牆</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-top">
+          <div class="sc-icon">🛏️</div>
+          <div class="sc-title-wrap">
+            <div class="sc-title">臥室床頭牆</div>
+            <div class="sc-place">溫柔私密的角落</div>
+          </div>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">每天睜眼就看到最愛的人。不需太多，但每一片都要有意義。</p>
+          <div class="sc-recipes">
+            <div class="sc-recipe"><b>浪漫首選：</b>20×30 × 2，豎向雙聯，最有床頭畫質感</div>
+            <div class="sc-recipe"><b>溫馨組合：</b>30×30 × 1 + 20×20 × 2，主角配角</div>
+            <div class="sc-recipe"><b>小坪數適用：</b>20×20 × 4，床頭小方陣</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-top">
+          <div class="sc-icon">🚪</div>
+          <div class="sc-title-wrap">
+            <div class="sc-title">玄關 / 走廊</div>
+            <div class="sc-place">第一眼的印象</div>
+          </div>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">狹長空間最適合豎向排列。20×30 的高挑比例是走廊的天然夥伴。</p>
+          <div class="sc-recipes">
+            <div class="sc-recipe"><b>經典款：</b>20×30 × 3，豎向三聯屏，最有藝廊感</div>
+            <div class="sc-recipe"><b>時間軸：</b>20×30 × 4 + 20×20 × 2，按時間排列</div>
+            <div class="sc-recipe"><b>極簡風：</b>30×30 × 1 + 20×30 × 1，不對稱有型</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-top">
+          <div class="sc-icon">🍽️</div>
+          <div class="sc-title-wrap">
+            <div class="sc-title">餐廳 / 廚房旁</div>
+            <div class="sc-place">讓每餐都有話題</div>
+          </div>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">吃飯時間是家人交流的黃金時刻。2–4 片剛剛好，不搶戲又有溫度。</p>
+          <div class="sc-recipes">
+            <div class="sc-recipe"><b>整齊推薦：</b>30×30 × 2，左右對稱，旅行美食照最配</div>
+            <div class="sc-recipe"><b>省空間：</b>20×30 × 3，豎三聯，不占橫向空間</div>
+            <div class="sc-recipe"><b>輕鬆活潑：</b>20×20 × 4，2×2 小方陣</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-top">
+          <div class="sc-icon">🧸</div>
+          <div class="sc-title-wrap">
+            <div class="sc-title">兒童房</div>
+            <div class="sc-place">紀錄每一步成長</div>
+          </div>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">孩子的房間要活潑有趣。20×20 最靈活，可讓孩子參與排列，隨成長更換。</p>
+          <div class="sc-recipes">
+            <div class="sc-recipe"><b>成長牆：</b>20×20 × 9，3×3 方陣，年年更新</div>
+            <div class="sc-recipe"><b>低掛設計：</b>20×20 × 6，橫三排掛低，孩子看得見</div>
+            <div class="sc-recipe"><b>混搭活潑：</b>20×30 × 2 + 20×20 × 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-card reveal">
+        <div class="sc-top">
+          <div class="sc-icon">📚</div>
+          <div class="sc-title-wrap">
+            <div class="sc-title">書房 / 工作角</div>
+            <div class="sc-place">靈感與動力來源</div>
+          </div>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">靈感牆要有重心感，不能太雜亂。30×30 打底，搭配豎形照片展示夢想目標。</p>
+          <div class="sc-recipes">
+            <div class="sc-recipe"><b>設計感：</b>30×30 × 2 + 20×30 × 1，不對稱組合</div>
+            <div class="sc-recipe"><b>俐落有型：</b>20×30 × 2，豎向雙聯，專注感</div>
+            <div class="sc-recipe"><b>單品點睛：</b>30×30 × 1 獨立掛，簡約有力</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMBO TABLE -->
+<section id="combos" class="sec sec-alt">
+  <div class="page-max">
+    <div class="sec-hd reveal">
+      <div class="sec-hd-inner">
+        <h2>套組方案 <em>推薦組合一覽</em></h2>
+        <div class="sec-tag">PACKAGE GUIDE</div>
+      </div>
+      <div class="sec-hd-line"></div>
+      <p class="sec-sub">清晰的套組讓消費者不再選擇障礙，看完直接下單</p>
+    </div>
+    <div class="reveal">
+      <table class="combo-table">
+        <thead>
+          <tr>
+            <th>套組名稱</th>
+            <th>內容規格</th>
+            <th>適合場景</th>
+            <th>推薦理由</th>
+            <th>標籤</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>嘗鮮入門組</td>
+            <td>20×20 × 4片</td>
+            <td>床頭、桌旁小角落</td>
+            <td>風險最低，先試手感再追購</td>
+            <td><span class="combo-tag ct-rec">首購推薦</span></td>
+          </tr>
+          <tr>
+            <td>床頭溫柔組</td>
+            <td>20×30 × 2片</td>
+            <td>臥室床頭</td>
+            <td>豎向雙聯，質感送禮首選</td>
+            <td><span class="combo-tag ct-gift">🎁 送禮首選</span></td>
+          </tr>
+          <tr>
+            <td>客廳氣派組</td>
+            <td>30×30 × 4片</td>
+            <td>客廳主牆</td>
+            <td>四連方陣，份量感最強</td>
+            <td><span class="combo-tag ct-hot">★ 最推薦</span></td>
+          </tr>
+          <tr>
+            <td>混搭設計師組</td>
+            <td>30×30×1 + 20×30×1 + 20×20×2</td>
+            <td>任何空間</td>
+            <td>三種尺寸全出現，層次最豐富</td>
+            <td><span class="combo-tag ct-new">設計感最強</span></td>
+          </tr>
+          <tr>
+            <td>豎三聯禮盒組</td>
+            <td>20×30 × 3片（加贈禮品包裝）</td>
+            <td>送禮</td>
+            <td>母親節 / 生日 / 結婚必備</td>
+            <td><span class="combo-tag ct-gift">🎁 節慶限定</span></td>
+          </tr>
+          <tr>
+            <td>全年紀念牆組</td>
+            <td>20×20 × 12–16片</td>
+            <td>客廳、走廊</td>
+            <td>12 個月紀念照一次展示</td>
+            <td><span class="combo-tag ct-rec">年終必備</span></td>
+          </tr>
+          <tr>
+            <td>九宮格標準組</td>
+            <td>20×20 × 9片</td>
+            <td>臥室 / 兒童房</td>
+            <td>人氣最高，新手最好入手</td>
+            <td><span class="combo-tag ct-hot">★ 人氣TOP</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING COPY -->
+<section id="marketing" class="sec">
+  <div class="page-max">
+    <div class="sec-hd reveal">
+      <div class="sec-hd-inner">
+        <h2>行銷話術 <em>刺激下單的文案參考</em></h2>
+        <div class="sec-tag">MARKETING COPY</div>
+      </div>
+      <div class="sec-hd-line"></div>
+      <p class="sec-sub">以三種真實尺寸為核心，情感先行、規格跟上的行銷策略</p>
+    </div>
+    <div class="mkt-grid">
+
+      <div class="mk reveal">
+        <div class="mk-head">
+          <div class="mk-channel">Instagram / Facebook 貼文</div>
+          <div class="mk-platform">社群貼文</div>
+        </div>
+        <div class="mk-body-wrap">
+          <div class="mk-title">「你選哪種？每種大小都有它的故事」</div>
+          <div class="mk-copy">20×20——多一點，才夠說完整個旅程
+20×30——豎起來，讓那張人像照有它值得的空間
+30×30——少就是多，一張就夠撐起一面牆
+
+三種大小，三種心情。
+你的牆，用你的方式來說故事 🏠
+
+📐 免打洞 · 可移位 · 不傷牆
+📦 7 天到貨 · 首單優惠
+
+→ 連結在 bio，現在下單 ↑</div>
+        </div>
+      </div>
+
+      <div class="mk reveal">
+        <div class="mk-head">
+          <div class="mk-channel">小紅書 / Threads 種草文</div>
+          <div class="mk-platform">種草文</div>
+        </div>
+        <div class="mk-body-wrap">
+          <div class="mk-title">「搬新家第一件事：這三種全買一套試試」</div>
+          <div class="mk-copy">佈置心得大公開✨
+
+小的（20×20）用來鋪量，一口氣掛 9 片超滿足
+中的（20×30）豎著掛，那張京都人像終於有家了 
+大的（30×30）放客廳最顯眼的地方，朋友來都問哪買的😂
+
+重點是完全免釘孔！！！
+租屋族真的必備，不滿意可以重新排，零壓力
+
+#MemoTiles #牆面佈置 #室內設計 #租屋改造 #照片牆</div>
+        </div>
+      </div>
+
+      <div class="mk reveal">
+        <div class="mk-head">
+          <div class="mk-channel">母親節 / 節慶行銷</div>
+          <div class="mk-platform">節慶限定文案</div>
+        </div>
+        <div class="mk-body-wrap">
+          <div class="mk-title">「30×30，給媽媽最大的那一份愛」</div>
+          <div class="mk-copy">今年母親節，不送花、不送保養品。
+
+用一片 30×30 的 MemoTiles
+把你和媽媽最喜歡的那張合照
+放大、掛在她每天經過的地方
+
+她每次看到那面牆，都會想起你 ♥
+
+🎁 母親節限定禮品包裝
+💌 附客製化祝賀卡
+🚀 節前 5 天下單保證到貨</div>
+        </div>
+      </div>
+
+      <div class="mk reveal">
+        <div class="mk-head">
+          <div class="mk-channel">猶豫客戶 / 轉換話術</div>
+          <div class="mk-platform">轉換策略</div>
+        </div>
+        <div class="mk-body-wrap">
+          <div class="mk-title">「不知道選哪個？照這個買就對了」</div>
+          <div class="mk-copy">👉 預算有限 → 4 片 20×20 入門組
+  掛床頭，馬上看到效果
+
+👉 想送禮 → 2 片 20×30 豎向雙聯
+  包裝精緻，質感完全拉滿
+
+👉 要佈置客廳 → 4 片 30×30
+  不用多想，直接選這組
+
+每一組都可以之後繼續擴充 😏
+MemoTiles 是會讓你回購的那種
+
+第一片不滿意 → 全額退款保證</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="sec sec-alt">
+  <div class="page-max">
+    <div class="sec-hd reveal">
+      <div class="sec-hd-inner">
+        <h2>佈置心法 <em>讓消費者從猶豫到下單</em></h2>
+        <div class="sec-tag">PRO TIPS</div>
+      </div>
+      <div class="sec-hd-line"></div>
+    </div>
+    <div class="tips-list reveal">
+      <div class="tip-row">
+        <div class="tip-num-col"><div class="tip-num">01</div></div>
+        <div class="tip-content">
+          <div class="tip-title">先展示「完成後」的效果（Before / After）</div>
+          <div class="tip-text">消費者最怕想像不到成果。提供豐富的實際案例照，讓他們直接看到「我家可以變成這樣」。印刷吧和 Mixtiles 都大量使用真實用戶的佈置成果照，這是轉換率最高的素材。</div>
+        </div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-num-col"><div class="tip-num">02</div></div>
+        <div class="tip-content">
+          <div class="tip-title">強調「零風險」：免打洞、可移位、不滿意退款</div>
+          <div class="tip-text">這三點是最強的消費者信心建立。在所有行銷素材中反覆強調，特別是「租屋族也適用」——台灣租屋比例高，這句話直接打中大量潛在客群。</div>
+        </div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-num-col"><div class="tip-num">03</div></div>
+        <div class="tip-content">
+          <div class="tip-title">給消費者「配方」而不是選項</div>
+          <div class="tip-text">不要說「三種尺寸可以搭配」，要說「客廳選這組、走廊選那組、送禮選這款」。直接告訴消費者答案，消除選擇障礙，是下單轉換率最有效的方法。</div>
+        </div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-num-col"><div class="tip-num">04</div></div>
+        <div class="tip-content">
+          <div class="tip-title">設計明確的「套組入口」讓消費者有起點</div>
+          <div class="tip-text">提供 4 片入門組、9 片標準組、16 片豪華組等明確選擇，讓猶豫中的消費者先從小組合進場體驗。MemoTiles 最大的優勢是可以無限擴充——第一組賣出就是回購的開始。</div>
+        </div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-num-col"><div class="tip-num">05</div></div>
+        <div class="tip-content">
+          <div class="tip-title">節慶時機：提早 2 週啟動，強調「節前到貨保證」</div>
+          <div class="tip-text">母親節、情人節、生日、喬遷、結婚是購買率最高的時機。「獨一無二的客製化禮物」+ 「保證節前到貨」+ 「禮品包裝服務」三合一是節慶行銷的黃金公式。</div>
+        </div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-num-col"><div class="tip-num">06</div></div>
+        <div class="tip-content">
+          <div class="tip-title">鼓勵 UGC：用折扣換真實口碑</div>
+          <div class="tip-text">鼓勵購買者在 Instagram 或小紅書分享佈置成果，給予下次購買折扣回饋。真實用戶的喜悅照比任何廣告都有說服力，且每一張都是免費的行銷素材。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec">
+  <div class="page-max">
+    <div class="cta-block reveal">
+      <div class="cta-left">
+        <h2>三種大小，一個決定<br>你的照片，值得一面牆</h2>
+        <p>從 4 片開始，免打洞、可移位、不滿意全額退款<br>7 天到貨，台灣本地出貨，租屋族也完全適用</p>
+      </div>
+      <div class="cta-right">
+        <button class="btn-white">立即選購套組</button>
+        <button class="btn-outline">查看所有佈局方案</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Memo<span>Tiles</span>｜客製化照片磚</div>
+    <div class="footer-info">
+      免打洞 · 可重複黏貼 · 台灣在地出貨<br>
+      客服時間：週一至週五 09:00–18:00
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting){
+      setTimeout(() => e.target.classList.add('on'), (i%6)*80);
+      obs.unobserve(e.target);
+    }
+  });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Active nav
+const secs = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if(window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  links.forEach(a => { a.classList.toggle('act', a.getAttribute('href') === '#'+cur); });
+});
+</script>
+</body>
+</html>
