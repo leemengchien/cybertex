@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kornit Atlas Max Poly — 印刷指南 IG 輪播</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Bebas+Neue&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface2: #1a1a1a;
+    --border: #2a2a2a;
+    --accent: #e8c96b;
+    --accent2: #c4a84f;
+    --text: #f0ede8;
+    --text-dim: #888;
+    --text-muted: #555;
+    --red-warn: #e05252;
+    --green-ok: #5eb87a;
+    --slide-w: 1080px;
+    --slide-h: 1080px;
+  }
+
+  body {
+    background: #050505;
+    font-family: 'Noto Sans TC', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 32px;
+    min-height: 100vh;
+  }
+
+  .page-title {
+    color: var(--text-dim);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* ── SLIDE WRAPPER ── */
+  .slide {
+    width: var(--slide-w);
+    height: var(--slide-h);
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+
+  /* ── GRID OVERLAY ── */
+  .slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(232,201,107,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,201,107,0.03) 1px, transparent 1px);
+    background-size: 54px 54px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .slide > * { position: relative; z-index: 1; }
+
+  /* ── COMMON ELEMENTS ── */
+  .slide-number {
+    position: absolute;
+    top: 44px;
+    right: 52px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--text-muted);
+  }
+
+  .brand-tag {
+    position: absolute;
+    bottom: 48px;
+    left: 52px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .brand-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  .accent-line {
+    width: 40px; height: 2px;
+    background: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 1 — COVER
+  ═══════════════════════════════════════════ */
+  #s1 {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px;
+  }
+
+  #s1 .eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  #s1 .main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 116px;
+    line-height: 0.92;
+    color: var(--text);
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
+  }
+
+  #s1 .main-title span {
+    color: var(--accent);
+  }
+
+  #s1 .subtitle {
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    max-width: 520px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+  }
+
+  #s1 .machine-badge {
+    position: absolute;
+    bottom: 120px;
+    right: 52px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 14px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  #s1 .machine-badge .label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  #s1 .machine-badge .value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  #s1 .corner-deco {
+    position: absolute;
+    top: 0; right: 0;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle at 100% 0%, rgba(232,201,107,0.08) 0%, transparent 70%);
+  }
+
+  #s1 .swipe-hint {
+    position: absolute;
+    bottom: 48px;
+    right: 52px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  #s1 .swipe-hint .arrow {
+    display: flex;
+    gap: 3px;
+  }
+  #s1 .swipe-hint .arrow span {
+    display: block;
+    width: 18px; height: 1px;
+    background: var(--text-muted);
+    position: relative;
+    top: 1px;
+  }
+
+  .step-dots {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; gap: 6px;
+  }
+  .step-dots .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+  .step-dots .dot.active {
+    background: var(--accent);
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 2 — 流程總覽
+  ═══════════════════════════════════════════ */
+  #s2 {
+    padding: 72px 72px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s2 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 68px;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    margin-bottom: 8px;
+  }
+  #s2 .slide-heading span { color: var(--accent); }
+
+  #s2 .sub {
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 52px;
+    font-weight: 300;
+  }
+
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1;
+  }
+
+  .flow-step {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .flow-step-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 56px;
+    flex-shrink: 0;
+  }
+
+  .flow-num {
+    width: 44px; height: 44px;
+    border: 1px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .flow-line {
+    width: 1px;
+    background: var(--border);
+    flex: 1;
+    margin: 0 auto;
+    min-height: 24px;
+  }
+
+  .flow-content {
+    flex: 1;
+    padding: 0 0 36px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 8px;
+  }
+
+  .flow-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+
+  .flow-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.65;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 3 — 台版尺寸
+  ═══════════════════════════════════════════ */
+  #s3 {
+    padding: 64px 64px 72px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s3 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+  }
+  #s3 .slide-heading span { color: var(--accent); }
+
+  #s3 .sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .pallet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    flex: 1;
+  }
+
+  .pallet-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .pallet-card.featured {
+    border-color: var(--accent2);
+    background: #141209;
+  }
+
+  .pallet-card.featured::after {
+    content: '最常用';
+    position: absolute;
+    top: 12px; right: 12px;
+    background: var(--accent);
+    color: #000;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 3px 7px;
+  }
+
+  .pallet-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pallet-dims {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+
+  .pallet-dims-cm {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 2px;
+  }
+
+  .pallet-use {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 2px;
+  }
+
+  .pallet-viz {
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+  }
+
+  .pallet-rect {
+    background: rgba(232,201,107,0.06);
+    border: 1px solid rgba(232,201,107,0.2);
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 4 — 檔案規格
+  ═══════════════════════════════════════════ */
+  #s4 {
+    padding: 68px 68px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s4 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 68px;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+  }
+  #s4 .slide-heading span { color: var(--accent); }
+
+  #s4 .sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 44px;
+    font-weight: 300;
+  }
+
+  .spec-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .spec-col-header {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .spec-col-header.ok { color: var(--green-ok); }
+  .spec-col-header.warn { color: var(--red-warn); }
+
+  .spec-col-header::before {
+    content: '';
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .spec-col-header.ok::before { background: var(--green-ok); }
+  .spec-col-header.warn::before { background: var(--red-warn); }
+
+  .spec-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .spec-item.good { border-left: 3px solid var(--green-ok); }
+  .spec-item.bad { border-left: 3px solid var(--red-warn); }
+
+  .spec-item-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+  }
+
+  .spec-item-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 5 — 色彩模式
+  ═══════════════════════════════════════════ */
+  #s5 {
+    padding: 68px 68px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s5 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 68px;
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  #s5 .slide-heading span { color: var(--accent); }
+
+  #s5 .sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 44px;
+    font-weight: 300;
+  }
+
+  .color-mode-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .color-block {
+    padding: 28px 26px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .color-block.rgb {
+    background: linear-gradient(135deg, #0a0f2a 0%, #111 100%);
+    border-color: #3a4a8a;
+  }
+  .color-block.cmyk {
+    background: linear-gradient(135deg, #0a1f10 0%, #111 100%);
+    border-color: #2a5a3a;
+  }
+
+  .color-block-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .color-block.rgb .color-block-label { color: #6a8fff; }
+  .color-block.cmyk .color-block-label { color: #5eb87a; }
+
+  .color-block-verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .color-block.rgb .color-block-verdict {
+    background: rgba(100,140,255,0.12);
+    color: #6a8fff;
+    border: 1px solid rgba(100,140,255,0.3);
+  }
+  .color-block.cmyk .color-block-verdict {
+    background: rgba(94,184,122,0.12);
+    color: var(--green-ok);
+    border: 1px solid rgba(94,184,122,0.3);
+  }
+
+  .color-block-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .color-tip {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+  .color-tip strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 6 — 布料準備
+  ═══════════════════════════════════════════ */
+  #s6 {
+    padding: 68px 68px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s6 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 68px;
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  #s6 .slide-heading span { color: var(--accent); }
+
+  #s6 .sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .fabric-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+  }
+
+  .fabric-rule {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .fabric-rule-icon {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    min-width: 44px;
+    text-align: center;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .fabric-rule-icon.ok { color: var(--green-ok); }
+  .fabric-rule-icon.warn { color: var(--red-warn); }
+  .fabric-rule-icon.info { color: var(--accent); }
+
+  .fabric-rule-text .title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 5px;
+  }
+  .fabric-rule-text .desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 7 — 檔案設定 step-by-step
+  ═══════════════════════════════════════════ */
+  #s7 {
+    padding: 68px 68px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s7 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  #s7 .slide-heading span { color: var(--accent); }
+
+  #s7 .sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .check-box {
+    width: 28px; height: 28px;
+    border: 1.5px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+  }
+
+  .check-content {
+    flex: 1;
+  }
+
+  .check-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 3px;
+  }
+
+  .check-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .check-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border: 1px solid;
+    flex-shrink: 0;
+  }
+  .check-tag.must { color: var(--red-warn); border-color: var(--red-warn); }
+  .check-tag.tip { color: var(--accent); border-color: var(--accent2); }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 8 — 常見錯誤
+  ═══════════════════════════════════════════ */
+  #s8 {
+    padding: 68px 68px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #s8 .slide-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 68px;
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  #s8 .slide-heading span { color: var(--red-warn); }
+
+  #s8 .sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .mistake-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+  }
+
+  .mistake-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red-warn);
+  }
+
+  .mistake-x {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--red-warn);
+    line-height: 1;
+  }
+
+  .mistake-text .title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  .mistake-text .fix {
+    font-size: 12px;
+    color: var(--green-ok);
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  .mistake-text .fix::before {
+    content: '✓ ';
+    font-weight: 700;
+  }
+
+  .mistake-impact {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE 9 — CTA 結尾
+  ═══════════════════════════════════════════ */
+  #s9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px;
+    background: var(--bg);
+  }
+
+  #s9 .corner-deco {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle at 0% 100%, rgba(232,201,107,0.07) 0%, transparent 70%);
+  }
+
+  #s9 .eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  #s9 .cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 100px;
+    line-height: 0.95;
+    color: var(--text);
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
+  }
+  #s9 .cta-title span { color: var(--accent); }
+
+  #s9 .cta-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  #s9 .cta-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--text-dim);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
+
+  #s9 .cta-item::before {
+    content: '';
+    display: block;
+    width: 24px; height: 1px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  #s9 .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--accent);
+    color: #000;
+    padding: 18px 32px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  /* ── SCROLL CONTAINER FOR DEMO ── */
+  .carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .slide-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #444;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-left: 4px;
+  }
+</style>
+</head>
+<body>
+
+<p class="page-title">Kornit Atlas Max Poly — IG 輪播圖文 × 9 張</p>
+
+<div class="carousel-wrapper">
+
+<!-- ══════════════ SLIDE 1 ══════════════ -->
+<span class="slide-label">Slide 01 / 封面</span>
+<div class="slide" id="s1">
+  <div class="corner-deco"></div>
+  <div class="eyebrow">Kornit Atlas Max Poly · 數位直噴印花</div>
+  <div class="main-title">如何給我們<br><span>正確檔案</span></div>
+  <div class="accent-line"></div>
+  <div class="subtitle">台版尺寸 · 檔案格式 · 色彩設定<br>一次搞懂，讓你的設計完美落版</div>
+
+  <div class="machine-badge">
+    <div class="label">印刷設備</div>
+    <div class="value">KORNIT ATLAS MAX POLY</div>
+  </div>
+
+  <div class="swipe-hint">
+    <span>滑動查看</span>
+    <div class="arrow"><span></span></div>
+  </div>
+
+  <div class="brand-tag">
+    <div class="brand-dot"></div>
+    <div class="brand-name">DTG · Direct to Garment</div>
+  </div>
+
+  <div class="step-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div>
+  </div>
+  <div class="slide-number">01 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 2 ══════════════ -->
+<span class="slide-label">Slide 02 / 下單流程</span>
+<div class="slide" id="s2">
+  <div class="accent-line"></div>
+  <div class="slide-heading">下單<span>流程</span></div>
+  <div class="sub">從確認尺寸到完成印刷，只需四步</div>
+
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-step-left">
+        <div class="flow-num">01</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-content">
+        <div class="flow-title">確認台版尺寸</div>
+        <div class="flow-desc">依據你的服裝尺碼與印花位置，選擇對應的台版。我們提供多種尺寸，從童裝到特大碼均可印製。</div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-step-left">
+        <div class="flow-num">02</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-content">
+        <div class="flow-title">依台版尺寸準備設計稿</div>
+        <div class="flow-desc">設計稿尺寸需在台版範圍內，解析度至少 150 dpi（建議 300 dpi），色彩模式設為 CMYK。</div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-step-left">
+        <div class="flow-num">03</div>
+        <div class="flow-line"></div>
+      </div>
+      <div class="flow-content">
+        <div class="flow-title">提交檔案與布料</div>
+        <div class="flow-desc">接受 AI / PDF（向量）或高解析度 PNG / JPG（300 dpi 以上）。布料需乾燥平整，無明顯皺褶。</div>
+      </div>
+    </div>
+
+    <div class="flow-step">
+      <div class="flow-step-left">
+        <div class="flow-num">04</div>
+      </div>
+      <div class="flow-content">
+        <div class="flow-title">確認打樣 → 批量生產</div>
+        <div class="flow-desc">首次合作建議先打樣確認色彩與位置，確認後即可進行批量印刷。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">02 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 3 ══════════════ -->
+<span class="slide-label">Slide 03 / 台版尺寸表</span>
+<div class="slide" id="s3">
+  <div class="accent-line"></div>
+  <div class="slide-heading">台版<span>尺寸</span></div>
+  <div class="sub">請依服裝尺碼選擇對應台版 — 設計稿需在範圍內</div>
+
+  <div class="pallet-grid">
+
+    <div class="pallet-card">
+      <div class="pallet-name">Baby Pallet</div>
+      <div class="pallet-dims">12.2 × 17.2</div>
+      <div class="pallet-dims-cm">cm · 新生兒</div>
+      <div class="pallet-use">新生兒 / 嬰兒服<br>小尺寸印花</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:32px;height:44px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Children Small</div>
+      <div class="pallet-dims">26.0 × 18.0</div>
+      <div class="pallet-dims-cm">cm · 兒童小</div>
+      <div class="pallet-use">小童上衣<br>短版設計</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:52px;height:36px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Children Large</div>
+      <div class="pallet-dims">26.0 × 32.0</div>
+      <div class="pallet-dims-cm">cm · 兒童大</div>
+      <div class="pallet-use">大童上衣<br>標準兒童版</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:50px;height:62px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Youth / Ladies</div>
+      <div class="pallet-dims">29.8 × 37.3</div>
+      <div class="pallet-dims-cm">cm · 青少女版</div>
+      <div class="pallet-use">女版上衣<br>青少年服裝</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:54px;height:68px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card featured">
+      <div class="pallet-name">Standard</div>
+      <div class="pallet-dims">39.6 × 49.8</div>
+      <div class="pallet-dims-cm">cm · 標準成人</div>
+      <div class="pallet-use">S–XL 成人T恤<br>最常見印花尺寸</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:62px;height:78px;border-color:rgba(232,201,107,0.4);"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Grand</div>
+      <div class="pallet-dims">49.0 × 64.0</div>
+      <div class="pallet-dims-cm">cm · 大版</div>
+      <div class="pallet-use">XL–2XL 大尺碼<br>全幅設計</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:68px;height:90px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Zipper Hoodie</div>
+      <div class="pallet-dims">40.4 × 50.6</div>
+      <div class="pallet-dims-cm">cm · 拉鍊帽T</div>
+      <div class="pallet-use">拉鍊帽T<br>有扣衣物</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:62px;height:78px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Tote Bag</div>
+      <div class="pallet-dims">26.2 × 31.2</div>
+      <div class="pallet-dims-cm">cm · 環保袋</div>
+      <div class="pallet-use">布製托特包<br>購物袋</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:50px;height:60px;"></div>
+      </div>
+    </div>
+
+    <div class="pallet-card">
+      <div class="pallet-name">Super Grand</div>
+      <div class="pallet-dims">60.0 × 89.0</div>
+      <div class="pallet-dims-cm">cm · 特大版</div>
+      <div class="pallet-use">3XL+ 超大碼<br>布料裁片全版印</div>
+      <div class="pallet-viz">
+        <div class="pallet-rect" style="width:76px;height:100px;border-color:rgba(232,201,107,0.25);"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">03 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 4 ══════════════ -->
+<span class="slide-label">Slide 04 / 檔案格式</span>
+<div class="slide" id="s4">
+  <div class="accent-line"></div>
+  <div class="slide-heading">檔案<span>格式</span></div>
+  <div class="sub">提交前請確認格式正確，避免延誤生產</div>
+
+  <div class="spec-cols">
+    <div>
+      <div class="spec-col-header ok">接受格式</div>
+
+      <div class="spec-item good">
+        <div class="spec-item-title">AI · EPS · PDF</div>
+        <div class="spec-item-desc">向量格式首選。可無限縮放不失真，文字請轉外框（Outline），確保字體正確顯示。</div>
+      </div>
+
+      <div class="spec-item good">
+        <div class="spec-item-title">PNG（透明背景）</div>
+        <div class="spec-item-desc">解析度 300 dpi 以上，依台版實際尺寸輸出。透明背景可直接印在布料上，不留白底。</div>
+      </div>
+
+      <div class="spec-item good">
+        <div class="spec-item-title">JPG · TIFF</div>
+        <div class="spec-item-desc">解析度 300 dpi 以上，色彩模式設為 CMYK。注意 JPG 有白底，會一同印出。</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="spec-col-header warn">不接受 / 須修正</div>
+
+      <div class="spec-item bad">
+        <div class="spec-item-title">低解析度圖檔</div>
+        <div class="spec-item-desc">72 dpi 螢幕圖片放大後印刷會嚴重模糊。<br>⚠ 請勿直接截圖或從網路下載圖片使用。</div>
+      </div>
+
+      <div class="spec-item bad">
+        <div class="spec-item-title">RGB 模式圖檔</div>
+        <div class="spec-item-desc">RGB 轉 CMYK 會有色差。請在設計軟體中直接設定為 CMYK 模式再輸出。</div>
+      </div>
+
+      <div class="spec-item bad">
+        <div class="spec-item-title">Word / PPT / PSD未拼合</div>
+        <div class="spec-item-desc">辦公軟體非印刷軟體，無法確保輸出品質。PSD 請先合併所有圖層再輸出。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">04 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 5 ══════════════ -->
+<span class="slide-label">Slide 05 / 色彩模式</span>
+<div class="slide" id="s5">
+  <div class="accent-line"></div>
+  <div class="slide-heading">色彩<span>設定</span></div>
+  <div class="sub">印刷色彩 ≠ 螢幕色彩 — 設定對了才能色色準確</div>
+
+  <div class="color-mode-blocks">
+    <div class="color-block cmyk">
+      <div class="color-block-label">CMYK</div>
+      <div class="color-block-verdict">✓ 推薦使用</div>
+      <div class="color-block-desc">印刷標準色彩模式。<br>直接反映實際印刷結果，<br>色差最小，是最佳選擇。</div>
+    </div>
+
+    <div class="color-block rgb">
+      <div class="color-block-label">RGB</div>
+      <div class="color-block-verdict">△ 可接受，但有風險</div>
+      <div class="color-block-desc">螢幕顯示模式，色域比<br>CMYK 寬。轉換後部分<br>鮮豔色可能變暗或偏移。</div>
+    </div>
+  </div>
+
+  <div class="color-tip">
+    <strong>專業建議：</strong>使用 Adobe Illustrator 或 Photoshop 建立新檔時，請直接選擇 <strong>CMYK 色彩模式</strong>。如有特殊 Pantone 指定色，請提供色號，我們會盡力配色。白色底布印色較鮮豔，深色底布需加白墨打底。
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">05 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 6 ══════════════ -->
+<span class="slide-label">Slide 06 / 布料準備</span>
+<div class="slide" id="s6">
+  <div class="accent-line"></div>
+  <div class="slide-heading">布料<span>準備</span></div>
+  <div class="sub">Kornit Atlas Max Poly 專為聚酯纖維優化設計</div>
+
+  <div class="fabric-rules">
+
+    <div class="fabric-rule">
+      <div class="fabric-rule-icon ok">✓</div>
+      <div class="fabric-rule-text">
+        <div class="title">適合材質</div>
+        <div class="desc">聚酯纖維（Polyester）100%、聚酯混紡（Poly Blends）、三元混紡（Tri-blends）、棉、萊卡、絲、丹寧等均可印製。</div>
+      </div>
+    </div>
+
+    <div class="fabric-rule">
+      <div class="fabric-rule-icon info">!</div>
+      <div class="fabric-rule-text">
+        <div class="title">布料尺寸需大於台版</div>
+        <div class="desc">布料必須能完整套上台版，並有足夠空間固定。請確認布料長寬均比台版尺寸大至少 5–10 cm。</div>
+      </div>
+    </div>
+
+    <div class="fabric-rule">
+      <div class="fabric-rule-icon info">!</div>
+      <div class="fabric-rule-text">
+        <div class="title">布料需乾燥無皺褶</div>
+        <div class="desc">印前請確認布料完全乾燥，鋪平於台版上無明顯皺褶。皺褶會導致印刷位置偏移或模糊。</div>
+      </div>
+    </div>
+
+    <div class="fabric-rule">
+      <div class="fabric-rule-icon warn">✗</div>
+      <div class="fabric-rule-text">
+        <div class="title">避免過於厚重或特殊表面</div>
+        <div class="desc">極厚牛仔布、防水塗層、矽膠表面等材質可能影響油墨附著。如有疑問請先諮詢我們確認。</div>
+      </div>
+    </div>
+
+    <div class="fabric-rule">
+      <div class="fabric-rule-icon warn">✗</div>
+      <div class="fabric-rule-text">
+        <div class="title">拼縫、拉鍊區域需提前告知</div>
+        <div class="desc">印花區域若有拼接縫線或金屬拉鍊，請使用對應的專用台版（如 Zipper Hoodie Pallet），並提前說明。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">06 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 7 ══════════════ -->
+<span class="slide-label">Slide 07 / 檔案準備清單</span>
+<div class="slide" id="s7">
+  <div class="accent-line"></div>
+  <div class="slide-heading">送稿<span>前</span>確認清單</div>
+  <div class="sub">逐項確認，讓你的稿件一次過關</div>
+
+  <div class="checklist">
+
+    <div class="check-item">
+      <div class="check-box">01</div>
+      <div class="check-content">
+        <div class="check-title">已選定台版尺寸</div>
+        <div class="check-desc">設計稿尺寸符合所選台版，且設計落在印刷範圍內</div>
+      </div>
+      <div class="check-tag must">必要</div>
+    </div>
+
+    <div class="check-item">
+      <div class="check-box">02</div>
+      <div class="check-content">
+        <div class="check-title">解析度 ≥ 300 dpi</div>
+        <div class="check-desc">以台版實際尺寸（cm / mm）為基準設定解析度</div>
+      </div>
+      <div class="check-tag must">必要</div>
+    </div>
+
+    <div class="check-item">
+      <div class="check-box">03</div>
+      <div class="check-content">
+        <div class="check-title">色彩模式設為 CMYK</div>
+        <div class="check-desc">或提供 RGB 並接受轉換後可能的色差風險</div>
+      </div>
+      <div class="check-tag must">必要</div>
+    </div>
+
+    <div class="check-item">
+      <div class="check-box">04</div>
+      <div class="check-content">
+        <div class="check-title">文字已轉外框（Outline）</div>
+        <div class="check-desc">避免因字體缺失造成版面跑版，適用 AI / PDF 格式</div>
+      </div>
+      <div class="check-tag must">必要</div>
+    </div>
+
+    <div class="check-item">
+      <div class="check-box">05</div>
+      <div class="check-content">
+        <div class="check-title">PNG 已設置透明背景</div>
+        <div class="check-desc">不需白底時請確認背景為透明，而非白色填充</div>
+      </div>
+      <div class="check-tag tip">建議</div>
+    </div>
+
+    <div class="check-item">
+      <div class="check-box">06</div>
+      <div class="check-content">
+        <div class="check-title">標注印花位置（胸前 / 背後 / 袖口）</div>
+        <div class="check-desc">若有特定定位需求請於訂單備注說明</div>
+      </div>
+      <div class="check-tag tip">建議</div>
+    </div>
+
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">07 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 8 ══════════════ -->
+<span class="slide-label">Slide 08 / 常見錯誤</span>
+<div class="slide" id="s8">
+  <div class="accent-line"></div>
+  <div class="slide-heading">常見<span>錯誤</span></div>
+  <div class="sub">這些問題最常造成重印或延誤，請特別注意</div>
+
+  <div class="mistake-list">
+
+    <div class="mistake-item">
+      <div class="mistake-x">✕</div>
+      <div class="mistake-text">
+        <div class="title">設計稿超出台版範圍</div>
+        <div class="fix">請將設計稿尺寸調整至所選台版尺寸內，超出部分會被裁切</div>
+      </div>
+      <div class="mistake-impact">最常見</div>
+    </div>
+
+    <div class="mistake-item">
+      <div class="mistake-x">✕</div>
+      <div class="mistake-text">
+        <div class="title">解析度不足（72 dpi 截圖）</div>
+        <div class="fix">印刷最低 150 dpi，建議 300 dpi。放大低解析圖只會讓模糊更明顯</div>
+      </div>
+      <div class="mistake-impact">嚴重影響</div>
+    </div>
+
+    <div class="mistake-item">
+      <div class="mistake-x">✕</div>
+      <div class="mistake-text">
+        <div class="title">RGB 鮮豔色轉 CMYK 後變暗</div>
+        <div class="fix">螢幕螢光色（電藍、螢光綠）在 CMYK 中無法完全重現，設計時請用 CMYK 色票</div>
+      </div>
+      <div class="mistake-impact">色差明顯</div>
+    </div>
+
+    <div class="mistake-item">
+      <div class="mistake-x">✕</div>
+      <div class="mistake-text">
+        <div class="title">JPG 有白色背景未處理</div>
+        <div class="fix">白底 JPG 印出後會有白色矩形。需透明背景請改用 PNG 格式</div>
+      </div>
+      <div class="mistake-impact">外觀問題</div>
+    </div>
+
+    <div class="mistake-item">
+      <div class="mistake-x">✕</div>
+      <div class="mistake-text">
+        <div class="title">未說明深 / 淺色布料</div>
+        <div class="fix">深色布料需加白墨打底，會影響色調與費用。下單時請告知布料顏色</div>
+      </div>
+      <div class="mistake-impact">報價影響</div>
+    </div>
+
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">DTG · Direct to Garment</div></div>
+  <div class="slide-number">08 / 09</div>
+</div>
+
+<!-- ══════════════ SLIDE 9 ══════════════ -->
+<span class="slide-label">Slide 09 / 結尾 CTA</span>
+<div class="slide" id="s9">
+  <div class="corner-deco"></div>
+
+  <div class="eyebrow">Ready to Print?</div>
+  <div class="cta-title">準備好<br>開始<span>印刷</span>了嗎</div>
+
+  <div class="cta-items">
+    <div class="cta-item">傳送設計稿給我們，免費確認可印性</div>
+    <div class="cta-item">不確定台版？告訴我們服裝尺碼，我們幫你選</div>
+    <div class="cta-item">首次合作建議打樣，確認色彩與位置</div>
+  </div>
+
+  <div class="cta-button">
+    聯絡我們 →
+  </div>
+
+  <div class="brand-tag"><div class="brand-dot"></div><div class="brand-name">Kornit Atlas Max Poly · DTG Printing</div></div>
+  <div class="slide-number">09 / 09</div>
+</div>
+
+</div><!-- end carousel-wrapper -->
+
+</body>
+</html>
